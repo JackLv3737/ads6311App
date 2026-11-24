@@ -1,0 +1,19 @@
+CODE_FLASH 0x00005000
+{
+        ER_IROM1 0x00005000
+        {
+                * (RESET,+FIRST)
+                * (InRoot$$Sections)
+                * (+RO)
+        }
+        DATA 0x20000300
+        {
+                * (+RW, +ZI)
+        }
+
+        ARM_LIB_STACKHEAP 0x20007ff0 EMPTY -0x00000400
+        {
+        }
+}
+
+
